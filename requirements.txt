@@ -1,0 +1,10 @@
+numpy
+scipy
+pandas
+matplotlib
+pillow
+scikit-learn
+imageio
+imageio-ffmpeg
+tqdm
+pytest
