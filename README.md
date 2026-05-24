@@ -1,7 +1,5 @@
 # QWO: Quantum Wavefunction Optimizer for Continuous Machine Learning Landscapes
 
-![Q-WO hero](outputs/release_media/readme_hero.png)
-
 > A simulator-based research prototype of a new optimization method. The
 > optimizer represents continuous parameters on a discretised quantum
 > register, propagates a complex wavefunction over parameter space using a
@@ -10,14 +8,12 @@
 > `|psi(theta)|^2`, and refines the top candidates with a classical local
 > optimiser.
 >
-> We measure a **quantum optimization signal** - cases where QWO reaches
+> As an **exploratory comparison**, we measure where QWO reaches
 > lower loss, higher success rate, or fewer objective evaluations than
 > matched classical baselines under the same evaluation budget. We make
-> **no claim of true quantum advantage.**
+> **no claim of quantum advantage.**
 
 ## Pipeline
-
-![Pipeline overview](outputs/release_media/pipeline_overview.png)
 
 For an objective `L(theta)` with `theta in R^d`:
 
@@ -57,15 +53,6 @@ python scripts/run_all_experiments.py --quick   # 2 seeds, ~5 seconds
 python scripts/build_release_media.py           # figures + GIF + MP4
 pytest -q
 ```
-
-## Sample animation
-
-![Wavefunction evolution](outputs/release_media/wavefunction_evolution.gif)
-
-Tracks `|Psi(theta)|^2` over QWO iterations as the wavefunction concentrates
-around low-loss regions of the parameter grid. A 2-D companion GIF on the
-same run lives at `outputs/release_media/cinematic_summary.gif`; the full
-1280x720 MP4 is `outputs/release_media/cinematic_summary.mp4`.
 
 ## The 20 experiments
 
@@ -113,8 +100,6 @@ evaluations_saved = evals_classical - evals_qwo
 ```
 on the runs where both methods reached the user-specified loss threshold.
 
-![Evaluations-to-threshold summary](outputs/release_media/evaluations_to_threshold.png)
-
 ## Honest read of the results
 
 QWO is competitive on a handful of synthetic 1-D / 2-D landscapes and is
@@ -126,8 +111,6 @@ for entanglement or for the kinetic mixer at the modest grid sizes used in
 `--quick` mode. We report this honestly: a quantum-inspired structure is
 not a free win, and a careful matched-budget benchmark is the right tool
 for telling the story.
-
-![Ablation summary](outputs/release_media/ablation_summary.png)
 
 ## Limitations
 
@@ -145,7 +128,7 @@ for telling the story.
 
 ## Honesty note
 
-We do **not** claim a true quantum advantage. The signal we report is a
+We do **not** claim any quantum advantage. The signal we report is a
 matched-budget performance difference on a controlled simulator-based
 benchmark. A real-world claim requires a problem with no efficient
 classical algorithm, accounting for shot noise, and an experimental
